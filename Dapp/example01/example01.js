@@ -11,7 +11,7 @@ var app = new Vue({
     data: {
         accounts: []
     },
-	methods: {
+    methods: {
         update: async function() {
 
             console.log("update start");
