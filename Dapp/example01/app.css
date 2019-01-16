@@ -9,16 +9,16 @@ tr:nth-child(odd) {
     background-color: #cbecff;
 }
 tr:first-child {
-    background: #a8badc
+    background: #a8badc;
 }
 th, td {
     padding: 10px;   
 }
 th {
-    font-size: 14pt
+    font-size: 14pt;
 }
 td:nth-child(2) {
-    text-align: right
+    text-align: right;
 }
 button {
     width: 150px;
