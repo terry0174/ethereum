@@ -1,0 +1,53 @@
+
+#app {
+    padding: 15px;   
+}
+#app div{
+    padding: 5px; 
+}
+#app div div{
+    padding: 2px; 
+}
+#app div div button{
+    margin-left: 10px;
+}
+span {
+    display: inline-block;
+    width: 120px;
+    padding: 5px; 
+}
+select, input{
+    width: 350px;
+    -ms-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    -webkit-box-sizing:content-box; 
+    box-sizing:content-box;
+}
+table{
+    width: 660px;
+}
+th, td {
+    padding: 10px;   
+}
+th {
+    width: 35%;
+    font-size: 14pt;
+    background: #a8badc;
+}
+td {
+    width: 65%;
+    text-align: right;
+    background-color: #cbecff;
+}
+button {
+    width: 140px;
+    height: 30px;
+    border-width: 0px;
+    border-radius: 5px;
+    background: #0c30b7;
+    color: white;
+}
+button:active {
+    background: #51b1ff;
+    color: black;
+}
