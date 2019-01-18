@@ -1,10 +1,7 @@
 /* init web3 */
-if (typeof web3 !== 'undefined') {
-    web3 = new Web3(web3.currentProvider);
-} else {
-    web3 = new Web3(new Web3.providers.WebsocketProvider("ws://192.168.99.1:8546"));
-    // web3 = new Web3(new Web3.providers.HttpProvider("http://192.168.99.1:8545"));
-}
+
+web3 = new Web3(new Web3.providers.WebsocketProvider("ws://192.168.99.1:8546"));
+// web3 = new Web3(new Web3.providers.HttpProvider("http://192.168.99.1:8545"));
 
 /* init smart contract */
 var contract = new web3.eth.Contract(abi, contractAddress);
