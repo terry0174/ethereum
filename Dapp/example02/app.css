@@ -1,14 +1,13 @@
-
 #app {
     padding: 15px;   
 }
-#app div{
+#app div {
     padding: 5px; 
 }
-#app div div{
+#app div div {
     padding: 2px; 
 }
-#app div div button{
+#app div div button {
     margin-left: 10px;
 }
 span {
@@ -16,14 +15,14 @@ span {
     width: 120px;
     padding: 5px; 
 }
-select, input{
+select, input {
     width: 350px;
     -ms-box-sizing:content-box;
     -moz-box-sizing:content-box;
     -webkit-box-sizing:content-box; 
     box-sizing:content-box;
 }
-table{
+table {
     width: 660px;
 }
 th, td {

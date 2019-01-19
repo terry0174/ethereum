@@ -1,5 +1,4 @@
 /* init web3 */
-
 web3 = new Web3(new Web3.providers.WebsocketProvider("ws://192.168.99.1:8546"));
 
 /* init smart contract */
@@ -53,6 +52,8 @@ var app = new Vue({
         updateDefaultAccount: function() {
 
             web3.eth.defaultAccount = this.defaultAccount;
+
+            console.log("updateDefaultAccount: " + this.defaultAccount);
         },
         updateInformation: function(){
 
