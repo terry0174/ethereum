@@ -39,7 +39,7 @@ exit
 ```
 
 # 其他指令
-***
+
 `檢查版本`
 ```Bash
 geth version
