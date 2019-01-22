@@ -1,10 +1,10 @@
-pragma solidity ^0.4.22;
+pragma solidity >=0.5.0 <0.6.0;
 
 contract Purchase {
     
     uint public value; //商品售價
-    address public seller; //賣家
-    address public buyer; //買家
+    address payable public seller; //賣家
+    address payable public buyer; //買家
     
     /**
      * Created - 合約已生成(可由買家購買或賣家中止合約)
