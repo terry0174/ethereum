@@ -22,7 +22,7 @@ contract ERC20Token is ERC20Interface{
     mapping(address=>uint256) balances; //帳戶餘額
     mapping(address=>mapping(address=>uint256)) allowances; //允許轉帳
     
-    constructor(string _name,string _symbol, uint8 _decimals,uint256 _supply) public{ 
+    constructor(string memory _name, string memory _symbol, uint8 _decimals,uint256 _supply) public{ 
         
         name = _name;
         symbol = _symbol;
