@@ -1,11 +1,9 @@
 # 
 # OS
-***
 
 https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum
 
 # Docker
-***
 
 ### Pull Image
 ```Bash
@@ -18,7 +16,6 @@ docker run –it --name ethereum-docker -v $HOME/ethereum-docker:/ethereum -p 85
 > $HOME/ethereum-docker 請自行更改
 
 # 建立私有鍊 
-***
 
 ### 建立創世區塊
 ```Bash
