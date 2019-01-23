@@ -16,7 +16,7 @@ docker run –it --name ethereum-docker -v $HOME/ethereum-docker:/ethereum -p 85
 > $HOME/ethereum-docker 請自行更改
 >
 > 如果需要挖礦需加上最低配置: 
->> --cpus=4 --memory 2048MB
+>> --memory 2048MB
 
 # 建立私有鍊 
 
