@@ -11,7 +11,7 @@ docker pull ethereum/client-go:alltools-stable
 ```
 ### Docker Run 
 ```Bash
-docker run –it --name ethereum-docker --memory 2048MB -v $HOME/ethereum-docker:/ethereum -p 8545:8545 –p 8546:8546 -p 30303:30303 ethereum/client-go:alltools-stable
+docker run –it --name ethereum-docker -v $HOME/ethereum-docker:/ethereum -p 8545:8545 –p 8546:8546 -p 30303:30303 ethereum/client-go:alltools-stable
 ```
 > $HOME/ethereum-docker 請自行更改
 >
