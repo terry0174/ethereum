@@ -1,4 +1,3 @@
-# 
 # OS
 
 https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum
