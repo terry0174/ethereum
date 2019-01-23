@@ -22,6 +22,10 @@ docker run –it --name ethereum-docker -v $HOME/ethereum-docker:/ethereum3 ethe
 >> --cpus=2
 >> 
 >> --memory 2048MB
+### Docker Start 
+```Bash
+docker start –i ethereum-docker
+```
 
 # 建立私有鍊 
 
