@@ -10,11 +10,15 @@ docker pull ethereum/client-go:alltools-stable
 ```
 ### Docker Run 
 ```Bash
-docker run –it --name ethereum-docker -v $HOME/ethereum-docker:/ethereum -p 8545:8545 –p 8546:8546 -p 30303:30303 ethereum/client-go:alltools-stable
+docker run –it --name ethereum-docker -v $HOME/ethereum-docker:/ethereum3 ethereum/client-go:alltools-stable
 ```
-> $HOME/ethereum-docker 請自行更改
+> -v 設定資料夾用於交換檔案
+>> $HOME/ethereum-docker 請自行更改
 >
-> 如果需要挖礦再加上配置: 
+> 需要對外加上
+>> -p 8545:8545 –p 8546:8546 -p 30303:3030
+>
+> 需要挖礦再加上配置: 
 >> --cpus=2
 >> 
 >> --memory 2048MB
@@ -147,9 +151,3 @@ txpool.status
 ```javascript
 eth.getTransaction(address)
 ```
-
-
-
-
-
-
