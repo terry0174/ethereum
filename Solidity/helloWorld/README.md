@@ -47,9 +47,9 @@ function (<parameter types>) {internal|external|public|private} [pure|constant|v
 `Example 05`
 
 ```javascript
-	modifier enough() {
-		require(address(this).balance > 10, "錢不夠");
-		_;
+    modifier enough() {
+        require(address(this).balance > 10, "錢不夠");
+        _;
     }
     
     function sayHello() public payable enough returns (string memory) {
