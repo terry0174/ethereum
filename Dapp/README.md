@@ -13,7 +13,7 @@
 
 ## 1. 直接開啟
 
-> 使用Chrome或Firfox開啟index.html
+> 使用Chrome或Firefox開啟index.html
 
 ## 2. Node.js
 
