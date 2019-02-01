@@ -11,8 +11,8 @@ contract Purchase {
      * Locked - 合約鎖定(買家已購買)
      * Inactive - 合約中止(交易結束或賣家中止合約)
      */
-    enum State { Created, Locked, Inactive }
-    State public state;
+    enum States { Created, Locked, Inactive }
+    States public contractState;
 
     modifier condition(bool _condition) {
         require(_condition);
@@ -29,8 +29,8 @@ contract Purchase {
         _;
     }
 
-    modifier inState(State _state) {
-        require(state == _state, "當前狀態無法呼叫此函式");
+    modifier inState(States _state) {
+        require(contractState == _state, "當前狀態無法呼叫此函式");
         _;
     }
 
@@ -50,9 +50,9 @@ contract Purchase {
 
     //賣家中止合約並回收押金。
     //只能在合約鎖定前,並由賣家調用。
-    function abort() public onlySeller inState(State.Created) {
+    function abort() public onlySeller inState(States.Created) {
         
-        state = State.Inactive;
+        contractState = States.Inactive;
         seller.transfer(address(this).balance);
         
         emit Aborted();
@@ -60,19 +60,19 @@ contract Purchase {
 
     //買家購買商品,並支付2倍售價以太幣(含押金)。
     //以太幣由合約帳戶鎖定。
-    function confirmPurchase() public inState(State.Created) condition(msg.value == (2 * value)) payable {
+    function confirmPurchase() public inState(States.Created) condition(msg.value == (2 * value)) payable {
         
         buyer = msg.sender;
-        state = State.Locked;
+        contractState = States.Locked;
         
         emit PurchaseConfirmed();
     }
 
     //買家通知合約已收到商品。
     //釋放合約鎖定的以太幣。
-    function confirmReceived() public onlyBuyer inState(State.Locked) {
+    function confirmReceived() public onlyBuyer inState(States.Locked) {
         
-        state = State.Inactive;
+        contractState = States.Inactive;
         
         buyer.transfer(value);
         seller.transfer(address(this).balance);
