@@ -71,7 +71,7 @@ var app = new Vue({
                 app.myContract.value = web3.utils.fromWei(value, 'ether');
             }); 
 
-            contract.methods.state().call().then(function(value){
+            contract.methods.contractState().call().then(function(value){
                 app.myContract.state = value;
             }); 
         },
