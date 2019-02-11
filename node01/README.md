@@ -39,13 +39,14 @@ puppeth
 geth --datadir data init asgard01.json
 ```
 > data 請改為自己的workspace
+>
 > asgard01.json 請改為自己的創世區塊
 
 ### Start
 ```Bash
 geth --datadir ./data --networkid 123456 --rpc --rpcaddr=0.0.0.0 --rpccorsdomain="*" --rpcapi=db,eth,net,web3,personal --ws --wsaddr=0.0.0.0 --wsorigins="*" --wsapi=db,eth,net,web3,personal --ipcdisable console
 ```
-> 將log輸出至檔案
+> 將 log 輸出至檔案
 >> console 2>> log.txt
 ### End
 ```Bash
