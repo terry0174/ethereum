@@ -45,6 +45,8 @@ geth --datadir data init asgard01.json
 ```Bash
 geth --datadir ./data --networkid 123456 --rpc --rpcaddr=0.0.0.0 --rpccorsdomain="*" --rpcapi=db,eth,net,web3,personal --ws --wsaddr=0.0.0.0 --wsorigins="*" --wsapi=db,eth,net,web3,personal --ipcdisable console
 ```
+> 將log輸出至檔案
+>> console 2>> log.txt
 ### End
 ```Bash
 exit
