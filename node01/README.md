@@ -10,7 +10,7 @@ docker pull ethereum/client-go:alltools-stable
 ```
 ### Docker Run 
 ```Bash
-docker run –it --name ethereum-docker -v $HOME/ethereum-docker:/ethereum3:z ethereum/client-go:alltools-stable
+docker run –it --name ethereum-docker -v $HOME/ethereum-docker:/ethereum:z ethereum/client-go:alltools-stable
 ```
 > -v 設定資料夾用於交換檔案
 >> $HOME/ethereum-docker 請自行更改
