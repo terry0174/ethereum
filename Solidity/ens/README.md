@@ -67,7 +67,7 @@ namehash(name)
         // => namehash('123.abc.com') == keccak256(abi.encodePacked(node, label))
 
 ```
-`取得address`
+`取得 address`
 ```Javascript
 getAddr(name)
 ```
