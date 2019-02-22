@@ -38,8 +38,7 @@ puppeth
 ```Bash
 geth --datadir data init asgard01.json
 ```
-> data 請改為自己的workspace
->
+> data 請改為自己的workspace  
 > asgard01.json 請改為自己的創世區塊
 
 ### Start
