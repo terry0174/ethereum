@@ -65,9 +65,9 @@ namehash(name)
         label = web3.sha3('123')
         // => namehash('123.abc.com') == keccak256(abi.encodePacked(node, label))
 ```
-[Keccak256()]: https://solidity.readthedocs.io/en/v0.5.3/units-and-global-variables.html#mathematical-and-cryptographic-functions
+[keccak256()]: https://solidity.readthedocs.io/en/v0.5.3/units-and-global-variables.html#mathematical-and-cryptographic-functions
 [abi.encodePacked()]: https://solidity.readthedocs.io/en/v0.5.3/abi-spec.html#abi-packed-mode
-[Keccak256()], [abi.encodePacked()] 
+[keccak256()], [abi.encodePacked()] 
 
 `取得 address`
 ```Javascript
