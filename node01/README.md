@@ -19,8 +19,7 @@ docker run –it --name ethereum-docker -v $HOME/ethereum-docker:/ethereum:z eth
 >> -p 8545:8545 –p 8546:8546 -p 30303:3030
 >
 > 需要挖礦再加上配置: 
->> --cpus=2
->> 
+>> --cpus=2  
 >> --memory 2048MB
 ### Docker Start 
 ```Bash
