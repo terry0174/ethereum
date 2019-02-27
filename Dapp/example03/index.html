@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example03</title>
+
+    <link rel="stylesheet" type="text/css" href="./app.css">
+    <link rel="stylesheet" type="text/css" href="./tab.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/http-vue-loader@1.4.0/src/httpVueLoader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.35/dist/web3.min.js"></script>
+    
+</head>
+<body>
+
+    <div id="app">
+        <div class="block">
+            <div>
+                <span>Default Accounts:</span>
+                <select v-model="account.defaultAccount" v-on:change="updateDefaultAccount()">
+                    <option v-for="address in account.addresses" :key="address">{{address}}</option>
+                </select>
+                <button class="btn" data-clipboard-action="copy" :data-clipboard-text="account.defaultAccount">copy</button>
+                <button v-on:click="getAccounts()">refresh</button>
+            </div>
+            <div>
+                <span>Password:</span>
+                <input type="password" v-model="account.defaultPassword" placeholder="password">
+            </div>
+        </div>
+        <div class="container">
+            <div class="tabs">
+                <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]">Ens</a>
+                <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]">Registrar</a>
+                <a v-on:click="activetab=3" v-bind:class="[ activetab === 3 ? 'active' : '' ]">Resolver</a>
+                <a v-on:click="activetab=4" v-bind:class="[ activetab === 4 ? 'active' : '' ]">Utils</a>
+                <a v-on:click="activetab=5; updateDomain();" v-bind:class="[ activetab === 5 ? 'active' : '' ]">Domain</a>
+            </div>
+        
+            <div class="content">
+                <div v-show="activetab === 1" class="tabcontent">
+                    <component-ens></component-ens>
+                </div>
+                <div v-show="activetab === 2" class="tabcontent">
+                    <component-registrar></component-registrar>
+                </div>
+                <div v-show="activetab === 3" class="tabcontent">
+                    <component-resolver></component-resolver>
+                </div>
+                <div v-show="activetab === 4" class="tabcontent">
+                    <component-utils></component-utils>
+                </div>
+                <div v-show="activetab === 5" class="tabcontent">
+                    <component-domain></component-domain>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <script src="./contract.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+</html>

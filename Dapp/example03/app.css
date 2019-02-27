@@ -1,0 +1,50 @@
+#app {
+    padding: 15px;   
+}
+.block div {
+    padding: 10px 5px 5px 5px; 
+}
+.block span {
+    display: inline-block;
+    min-width: 120px;
+    padding: 5px; 
+}
+.block select, input {
+    width: 350px;
+    margin-right: 5px;
+    -ms-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    -webkit-box-sizing:content-box; 
+    box-sizing:content-box;
+}
+th, td {
+    padding: 6px;   
+}
+th {
+    background: #a8badc;
+}
+td {
+    text-align: center;
+    background-color: #cbecff;
+}
+td div {
+    display: inline-block;
+}
+button {
+    width: 140px;
+    height: 30px;
+    border-width: 0px;
+    border-radius: 5px;
+    background: #0c30b7;
+    color: white;
+}
+button:active {
+    background: #51b1ff;
+    color: black;
+}
+.long-button{  
+    width: 200px;
+}
+.tabcontent {
+    overflow: auto
+}
