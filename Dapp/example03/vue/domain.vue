@@ -3,6 +3,12 @@ table{
     min-width: 1200px;
 }
 td:nth-child(1) {
+    font-weight:bold;
+}
+td:nth-child(1):hover {
+    background: #89d4ff;
+}
+td:nth-child(2) {
     text-align: right;
     padding-right: 20px;
 }
@@ -10,10 +16,15 @@ td:nth-child(1) {
 <template>
     <div class="block">
         <div>
+            <input type="text" v-model="form.addUrl.input" placeholder="url">
+            <button v-on:click="addNode(null)">Add</button>
+        </div>
+        <div style="padding-top:15px">
             <button v-on:click="update()">Update</button>
         </div>
         <table>
             <tr>
+                <th></th>
                 <th>Url</th>
                 <th>Registry</th>
                 <th>Resolver</th>
@@ -21,6 +32,7 @@ td:nth-child(1) {
                 <th>Addr</th>
             </tr>
             <tr v-for="node in nodes" :key="node.url">
+                <td v-on:click="remove(node.url)">X</td>
                 <td>{{node.url}}</td>
                 <td>{{node.registry | zeroCheck}}</td>
                 <td>{{node.resolver | zeroCheck}}</td>
@@ -37,7 +49,12 @@ module.exports = {
 
         return {
             nodes: [],
-            registrars: []
+            registrars: [],
+            form: {
+                addUrl: {
+                    input: ''
+                }
+            }
         }
     },
     filters: {
@@ -53,6 +70,8 @@ module.exports = {
 	methods: {
         addNode: function(url){
 
+            url = (url == null ? this.form.addUrl.input : url);
+
             var i = this.nodes.findIndex(function(node) {
                 return node.url == url;
             });
@@ -66,6 +85,14 @@ module.exports = {
                     addr: ''
                 });
             }
+        },
+        remove: function(url){
+
+            var i = this.nodes.findIndex(function(node) {
+                return node.url == url;
+            });
+
+            this.nodes.splice(i, 1);
         },
         update: async function(){
 
