@@ -20,7 +20,7 @@ https://github.com/ensdomains/resolvers/tree/master/contracts
 ### myEnsUtils.js
 [ensutils.js]: https://github.com/ensdomains/ens/blob/master/ensutils.js
 > 直接載入 geth console 介面使用  
-> 修改自[ensutils.js]
+> 修改自 [ensutils.js]
 
 `發佈 ENSRegistry`
 ```Javascript
