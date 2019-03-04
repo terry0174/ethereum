@@ -105,11 +105,11 @@ https://github.com/terry0174/ethereum/tree/master/Solidity/ens
     >> ens.addr('test.com') = '0x1111111111111111111111111111111111111111'
 6. See Domain
 
-    - | Url | Registry | Resolver | Owner | Addr |
-    :---------: | --------: | :---------: | :--------: | :---------: | :--------: |
-    X |  | -  | - | 0xa0fE35dE81216D0dbc1A96d595228307b05A4490  | - |
-    X | com | Test  | - | 0xf92F06946796880EC724015664A6507304e7eA71  | - |
-    X | test.com | -  | 0x4a2185b002e2E03BB60863dDe0827C0B8026B249 | 0xa0fE35dE81216D0dbc1A96d595228307b05A4490  | 0x1111111111111111111111111111111111111111 |
+    | - | Url | Registry | Resolver | Owner | Addr |
+    | :---------: | --------: | :---------: | :--------: | :---------: | :--------: |
+    | X |  | -  | - | 0xa0fE35dE81216D0dbc1A96d595228307b05A4490  | - |
+    | X | com | Test  | - | 0xf92F06946796880EC724015664A6507304e7eA71  | - |
+    | X | test.com | -  | 0x4a2185b002e2E03BB60863dDe0827C0B8026B249 | 0xa0fE35dE81216D0dbc1A96d595228307b05A4490  | 0x1111111111111111111111111111111111111111 |
 
     > default account = '0xa0fE35dE81216D0dbc1A96d595228307b05A4490'  
     > registrar.address = '0xf92F06946796880EC724015664A6507304e7eA71'  
