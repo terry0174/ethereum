@@ -54,23 +54,23 @@ https://github.com/terry0174/ethereum/tree/master/Solidity/ens
     * web3.sha3
         * web3.utils.sha3 (for web3.js 1.0.0)
     * namehash
-    ```javascript
-    function namehash(name) {
+        ```javascript
+        function namehash(name) {
 
-        var node = '0x0000000000000000000000000000000000000000000000000000000000000000';
-        
-        if (name != '') {
+            var node = '0x0000000000000000000000000000000000000000000000000000000000000000';
+            
+            if (name != '') {
 
-            var labels = name.split(".");
+                var labels = name.split(".");
 
-            for(var i = labels.length - 1; i >= 0; i--) {
-                node = web3.utils.sha3(node + web3.utils.sha3(labels[i]).slice(2), {encoding: 'hex'});
+                for(var i = labels.length - 1; i >= 0; i--) {
+                    node = web3.utils.sha3(node + web3.utils.sha3(labels[i]).slice(2), {encoding: 'hex'});
+                }
             }
-        }
 
-        return node.toString();
-    }
-    ```
+            return node.toString();
+        }
+        ```
     > namehash(label.node) = keccak256( abi.encodePacked( namehash(node), sha3(label) ) )
 
 `Domain`
