@@ -30,5 +30,5 @@ http-server
 ```
 > http://localhost:8080/example00  
 > http://localhost:8080/example01  
-> http://localhost:8080/example02
+> http://localhost:8080/example02  
 > http://localhost:8080/example03
