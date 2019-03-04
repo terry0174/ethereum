@@ -10,8 +10,8 @@ https://github.com/terry0174/ethereum/tree/master/Solidity/ens
 `Ens`
 
 * Deply Contract 
-    > 呼叫 JavaScript 事件 - 重整頁面 (Ens, Registrar, Resolver, Domain)  
-    > 呼叫 JavaScript 事件 - Domain 新增節點
+    * 呼叫 JavaScript 事件 - 重整頁面 (Ens, Registrar, Resolver, Domain)  
+    * 呼叫 JavaScript 事件 - Domain 新增節點
 * View 
     * Owner
         * 查詢節點 Owner Address
@@ -22,20 +22,20 @@ https://github.com/terry0174/ethereum/tree/master/Solidity/ens
 * Function 
     * Set Subnode Owner
         * 設定子節點 Owner
-        > 呼叫 JavaScript 事件 - Domain 新增節點
+        * 呼叫 JavaScript 事件 - Domain 新增節點
     * Set Resolver
         * 設定節點 Resolver
-        > 呼叫 JavaScript 事件 - Domain 新增節點
+        * 呼叫 JavaScript 事件 - Domain 新增節點
 
 `Registrar`
 
 * Deply Contract 
-    > 呼叫 JavaScript 事件 - Ens Set Subnode Owner  
-    > 呼叫 JavaScript 事件 - Domain 新增 Registrar
+    * 呼叫 JavaScript 事件 - Ens Set Subnode Owner  
+    * 呼叫 JavaScript 事件 - Domain 新增 Registrar
 * Function 
     * Register
         * 註冊 Registrar 底下節點
-        > 呼叫 JavaScript 事件 - Domain 新增節點  
+        * 呼叫 JavaScript 事件 - Domain 新增節點  
 
 `Resolver`
 
@@ -43,7 +43,7 @@ https://github.com/terry0174/ethereum/tree/master/Solidity/ens
 * Function 
     * Set Addr
         * 設定節點 address value  
-        > 呼叫 JavaScript 事件 - Ens Set Resolver  
+        * 呼叫 JavaScript 事件 - Ens Set Resolver  
 
 `Utils`
 
@@ -81,28 +81,31 @@ https://github.com/terry0174/ethereum/tree/master/Solidity/ens
         * 刪除節點
     * Update
         * 更新table
-        > 每次切入 Domain 頁面自動更新一次
+        * 每次切入 Domain 頁面自動呼叫一次
 
 # Example
 1. Deploy Ens Contract
-    > Deploy Success 才可進下個步驟
+    * Deploy Success 才可進下個步驟
 2. Deploy Registrar Contract
-    * node = ''
-    * label = 'com'
-    > Set Subnode Owner 事件結束才可進下個步驟  
-    >> ens.owner(namehash('com')) = */\*registrar.address\*/*
+    * Input
+        * node = ''
+        * label = 'com'
+    * Set Subnode Owner 事件結束才可進下個步驟  
+        * ens.owner(namehash('com')) = */\*registrar.address\*/*
 3. Use Registrar to Register
-    * label = 'test'
-    * owner = */\*default account\*/*
-    > ens.owner(namehash('test.com')) = */\*default account\*/*
+    * Input
+        * label = 'test'
+        * owner = */\*default account\*/*
+    * ens.owner(namehash('test.com')) = */\*default account\*/*
 4. Deploy Reolver Contract
-    > Deploy Success 才可進下個步驟
+    * Deploy Success 才可進下個步驟
 5. Use Reolver to Set Addr
-    * node = 'test.com'
-    * address = '0x1111111111111111111111111111111111111111'
-    > Set Resolver 事件結束才可進下個步驟  
-    >> ens.resolver(namehash('test.com')) = */\*resolver.address\*/*  
-    >> ens.addr('test.com') = '0x1111111111111111111111111111111111111111'
+    * Input
+        * node = 'test.com'
+        * address = '0x1111111111111111111111111111111111111111'
+    * Set Resolver 事件結束才可進下個步驟  
+        * ens.resolver(namehash('test.com')) = */\*resolver.address\*/*  
+        * ens.addr('test.com') = '0x1111111111111111111111111111111111111111'
 6. See Domain
 
     | - | Url | Registry | Resolver | Owner | Addr |
