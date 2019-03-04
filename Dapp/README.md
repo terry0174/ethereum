@@ -2,7 +2,7 @@
 
 `example00`
 > 範例模板
->> Web3.js + vue.js
+>> Web3.js + Vue.js
 
 `example01`
 > Web3範例
