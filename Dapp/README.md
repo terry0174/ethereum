@@ -15,6 +15,11 @@
 `example03`
 > ENS範例
 
+# Exercise
+
+`exercise01`
+> 新增傳輸以太幣功能
+
 # Run
 
 ## 1. 直接開啟
