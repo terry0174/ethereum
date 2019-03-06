@@ -18,7 +18,8 @@
 # Exercise
 
 `exercise01`
-> 新增傳輸以太幣功能
+> example01 新增傳輸以太幣功能
+>> 建議參考 example02
 
 # Run
 
