@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise01</title>
+
+    <link rel="stylesheet" type="text/css" href="./app.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.35/dist/web3.min.js"></script>
+    
+</head>
+<body>
+
+    <div id="app">
+        <div id="form">
+            <div>
+                <span>Default Accounts:</span>
+                <select v-model="defaultAccount" v-on:change="updateDefaultAccount()">
+                    <option v-for="address in addresses" :key="address">{{address}}</option>
+                </select>
+                <button v-on:click="getAccounts()">refresh</button>
+            </div>
+            <div>
+                <span>Password:</span>
+                <input type="password" v-model="defaultPassword" placeholder="password">
+            </div>
+            <div>
+                <span>Transation:</span>
+                <select v-model="transation.to">
+                    <option v-for="address in addresses" :key="address">{{address}}</option>
+                </select>
+            </div>
+            <div>
+                <span></span>
+                <input type="number" min="0" v-model="transation.value" placeholder="ether">
+                <button v-on:click="sentTransation()">Sent</button>
+            </div>
+        </div>
+        <div id="accounts-table">
+            <table>
+                <tr>
+                    <th>address</th>
+                    <th>ether</th>
+                </tr>
+                <tr v-for="account in accounts" :key="account.address">
+                    <td>{{account.address}}</td>
+                    <td>{{account.ether}} ether</td>
+                </tr>
+            </table>
+            <button v-on:click="update()">update</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+
+</body>
+</html>
